@@ -1,0 +1,21 @@
+{
+	"name": "dev-lambda",
+	"version": "0.0.1",
+	"description": "Provide AWS Lambda like functionality for local development purposes.",
+	"engines": {
+		"node": "0.12.7"
+	},
+	"scripts": {
+		"start": "node lib/daemon.js lambdas/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CoursePark/dev-lambda.git"
+	},
+	"dependencies": {
+		"body-parser": "1.14.1",
+		"express": "4.13.3",
+		"lodash": "3.10.1",
+		"when": "3.7.3"
+	}
+}
