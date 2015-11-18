@@ -17,5 +17,6 @@
 		"express": "4.13.3",
 		"lodash": "3.10.1",
 		"when": "3.7.3"
-	}
+	},
+	"license": "MIT"
 }
