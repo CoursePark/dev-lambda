@@ -20,6 +20,16 @@ locally for rapidly testing changes, offline development, and intergration testi
 
 First copy the example lambda directory into the lambdas directory so we have something to see once the server is up.
 
+### Clone and Get Dependencies
+
+```
+git clone https://github.com/CoursePark/dev-lambda.git
+cd dev-lambda
+npm install
+```
+
+### Use Example Worker
+
 ```
 cp -r example-lambda lambdas/
 ```
