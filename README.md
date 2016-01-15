@@ -42,18 +42,18 @@ Now we can kick off the server with Node.js, later we will do the same with a do
 node lib/daemon.js
 ```
 
-Now visit `http://127.0.0.1:8080/` in your browser and you should see JSON saying something like:
+Now visit `http://127.0.0.1:9961/` in your browser and you should see JSON saying something like:
 
 ```
 {"example-lambda":{"config":{"name":"example-lambda","dirPath":"/Users/me/dev-lambda/lambdas/example-lambda","handler":"index.handler","maxMemory":128,"timeout":3}}}
 ```
 
-So great, we can see that the example `example-lambda` is set up and ready. Lets run it, this is done by POSTing to `http://127.0.0.1:8080/example-lambda`.
+So great, we can see that the example `example-lambda` is set up and ready. Lets run it, this is done by POSTing to `http://127.0.0.1:9961/example-lambda`.
 
 using curl:
 
 ```
-curl -X POST http://127.0.0.1:8080/example-lambda
+curl -X POST http://127.0.0.1:9961/example-lambda
 ```
 
 or use something like the excellent Chrome App [Postman](http://www.getpostman.com)
@@ -67,7 +67,7 @@ and should get something like, look for the `Hello World!`:
 Now we just need the ability to pass event data into the lambda. This is accomplished by POSTing JSON as a request body and having a `Content-Type: application/json` header.
 
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"abc":"123"}' http://127.0.0.1:8080/sync/example-lambda
+curl -H "Content-Type: application/json" -X POST -d '{"abc":"123"}' http://127.0.0.1:9961/sync/example-lambda
 ```
 
 results in something like:
@@ -83,5 +83,5 @@ docker build -t dev-lambda .
 ```
 
 ```
-docker run -ti -p 8080:8080 -v /Users/me/my-lambdas/:/usr/src/app/lambdas dev-lambda
+docker run -ti -p 9961:9961 -v /Users/me/my-lambdas/:/usr/src/app/lambdas dev-lambda
 ```
