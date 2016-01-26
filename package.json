@@ -1,6 +1,6 @@
 {
 	"name": "dev-lambda",
-	"version": "0.0.10",
+	"version": "0.1.0",
 	"description": "Provide AWS Lambda like functionality for local development purposes.",
 	"engines": {
 		"node": "0.12.7"
